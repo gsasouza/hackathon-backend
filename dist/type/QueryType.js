@@ -11,9 +11,9 @@ var BuildLoader = _interopRequireWildcard(require("../build/BuidLoader"));
 
 var _BuildType = _interopRequireDefault(require("../modules/build/BuildType"));
 
-var PathLoader = _interopRequireWildcard(require("../build/PathLoader"));
+var PathLoader = _interopRequireWildcard(require("../path/PathLoader"));
 
-var _PathType = _interopRequireDefault(require("../modules/build/PathType"));
+var _PathType = _interopRequireDefault(require("../modules/path/PathType"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

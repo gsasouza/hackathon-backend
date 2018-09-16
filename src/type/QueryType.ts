@@ -7,8 +7,8 @@ import * as BuildLoader from '../build/BuidLoader';
 import BuildType from '../modules/build/BuildType';
 
 
-import * as PathLoader from '../build/PathLoader';
-import PathType from '../modules/build/PathType';
+import * as PathLoader from '../path/PathLoader';
+import PathType from '../modules/path/PathType';
 
 export default new GraphQLObjectType({
   name: 'Query',
