@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "prestart": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose",
     "start": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" src/index.js",
     "update-schema": "babel-node  --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.js"
   },
