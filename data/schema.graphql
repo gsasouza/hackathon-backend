@@ -1,3 +1,12 @@
+"""Build data"""
+type Build {
+  """The ID of an object"""
+  id: ID!
+  _id: String
+  name: String
+  mark: Mark
+}
+
 """Mark data"""
 type Mark {
   """The ID of an object"""
@@ -14,10 +23,12 @@ type Path {
   id: ID!
   _id: String
   name: String
-  mark: Mark
+  marks: [Mark]
 }
 
 """The root of all... queries"""
 type Query {
-  builds: [Path]
+  builds: [Build]
+  paths: [Path]
+  path(id: ID): Path
 }

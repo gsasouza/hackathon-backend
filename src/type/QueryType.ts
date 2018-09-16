@@ -29,7 +29,7 @@ export default new GraphQLObjectType({
           type: GraphQLID
         },
       },
-      resolve: (obj, args, context) => PathLoader.load(context, fromGlobalId(id).id),
+      resolve: (obj, args, context) => PathLoader.load(context, fromGlobalId(args.id).id),
     }
   })
 });
