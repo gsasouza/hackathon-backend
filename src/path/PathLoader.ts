@@ -56,5 +56,5 @@ type Args = {
 
 export const loadPaths = async (context: DataloaderContext, args: Args) => {
   const where = args.search ? { name: { $regex: new RegExp(`^${args.search}`, 'ig') } } : {};
-  return PathModel.find(where, { _id: 1 }).sort({ createdAt: -1 });
+  return PathModel.find(where).sort({ createdAt: -1 });
 };

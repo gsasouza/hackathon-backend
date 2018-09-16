@@ -112,9 +112,7 @@ function () {
                 $regex: new RegExp("^".concat(args.search), 'ig')
               }
             } : {};
-            return _context2.abrupt("return", _PathModel.default.find(where, {
-              _id: 1
-            }).sort({
+            return _context2.abrupt("return", _PathModel.default.find(where).sort({
               createdAt: -1
             }));
 

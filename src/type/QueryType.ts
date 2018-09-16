@@ -25,7 +25,9 @@ export default new GraphQLObjectType({
     path: {
       type: PathType,
       args: {
-        id: GraphQLID,
+        id: {
+          type: GraphQLID
+        },
       },
       resolve: (obj, args, context) => PathLoader.load(context, fromGlobalId(id).id),
     }

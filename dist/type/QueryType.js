@@ -42,7 +42,9 @@ var _default = new _graphql.GraphQLObjectType({
       path: {
         type: _PathType.default,
         args: {
-          id: _graphql.GraphQLID
+          id: {
+            type: _graphql.GraphQLID
+          }
         },
         resolve: function resolve(obj, args, context) {
           return PathLoader.load(context, (0, _graphqlRelay.fromGlobalId)(id).id);
