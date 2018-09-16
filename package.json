@@ -5,9 +5,10 @@
   "main": "app.js",
   "prestart": "",
   "scripts": {
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose",
-    "start": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" src/index.js",
+    "dev": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" src/index.js",
     "update-schema": "babel-node  --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.js"
   },
   "keywords": [],
