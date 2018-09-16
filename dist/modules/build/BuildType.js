@@ -20,21 +20,21 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // @flow
 //import { NodeInterface } from '../../interface/NodeInterface';
 var _default = new _graphql.GraphQLObjectType({
-  name: 'Path',
-  description: 'Path data',
+  name: 'Build',
+  description: 'Build data',
   fields: function fields() {
     return {
-      id: (0, _graphqlRelay.globalIdField)('Path'),
+      id: (0, _graphqlRelay.globalIdField)('Build'),
       _id: {
         type: _graphql.GraphQLString,
-        resolve: function resolve(path) {
-          return path._id;
+        resolve: function resolve(build) {
+          return build._id;
         }
       },
       name: {
         type: _graphql.GraphQLString,
-        resolve: function resolve(path) {
-          return path.name;
+        resolve: function resolve(build) {
+          return build.name;
         }
       },
       mark: {

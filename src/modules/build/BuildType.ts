@@ -7,17 +7,17 @@ import * as MarkLoader from '../../mark/MarkLoader';
 import MarkType from '../mark/MarkType';
 
 export default new GraphQLObjectType({
-  name: 'Path',
-  description: 'Path data',
+  name: 'Build',
+  description: 'Build data',
   fields: () => ({
-    id: globalIdField('Path'),
+    id: globalIdField('Build'),
     _id: {
       type: GraphQLString,
-      resolve: path => path._id,
+      resolve: build => build._id,
     },
     name: {
       type: GraphQLString,
-      resolve: path => path.name,
+      resolve: build => build.name,
     },
     mark: {
       type: MarkType,
