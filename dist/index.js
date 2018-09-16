@@ -1,7 +1,5 @@
 "use strict";
 
-require("babel-polyfill");
-
 var _app = _interopRequireDefault(require("./app"));
 
 var _database = _interopRequireDefault(require("./database"));

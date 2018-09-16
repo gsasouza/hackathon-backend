@@ -54,12 +54,5 @@ type Args = {
 
 export const loadMarks = async (context: DataloaderContext, args: Args) => {
   const where = args.search ? { name: { $regex: new RegExp(`^${args.search}`, 'ig') } } : {};
-  const marks = MarkModel.find(where, { _id: 1 }).sort({ createdAt: -1 });
-
-  return connectionFromMongoCursor({
-    cursor: marks,
-    context,
-    args,
-    loader: load,
-  });
+  return MarkModel.find(where).sort({ createdAt: -1 });
 };
