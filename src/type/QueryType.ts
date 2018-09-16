@@ -20,14 +20,14 @@ export default new GraphQLObjectType({
     },
     paths: {
       type: new GraphQLList(PathType),
-      resolve: (obj, args, context) => PathLoader.loadBuilds(context, args),
+      resolve: (obj, args, context) => PathLoader.loadPaths(context, args),
     },
     path: {
       type: PathType,
       args: {
         id: GraphQLID,
       },
-      resolve: (obj, args, context) => PathLoader.loadBuilds(context, args),
+      resolve: (obj, args, context) => PathLoader.load(context, fromGlobalId(id).id),
     }
   })
 });

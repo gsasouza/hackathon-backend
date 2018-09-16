@@ -26,10 +26,9 @@ router.all(
 const graphqlSettingsPerReq = async req => {
 
   const dataloaders = registerLoaders();
-  console.log(schema)
 
   return {
-    graphiql: process.env.NODE_ENV !== 'production',
+    graphiql: true,
     schema,
     context: {
       req,

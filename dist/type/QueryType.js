@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _graphql = require("graphql");
 
+var _graphqlRelay = require("graphql-relay");
+
 var BuildLoader = _interopRequireWildcard(require("../build/BuidLoader"));
 
 var _BuildType = _interopRequireDefault(require("../modules/build/BuildType"));
@@ -34,7 +36,7 @@ var _default = new _graphql.GraphQLObjectType({
       paths: {
         type: new _graphql.GraphQLList(_PathType.default),
         resolve: function resolve(obj, args, context) {
-          return PathLoader.loadBuilds(context, args);
+          return PathLoader.loadPaths(context, args);
         }
       },
       path: {
@@ -43,7 +45,7 @@ var _default = new _graphql.GraphQLObjectType({
           id: _graphql.GraphQLID
         },
         resolve: function resolve(obj, args, context) {
-          return PathLoader.loadBuilds(context, args);
+          return PathLoader.load(context, (0, _graphqlRelay.fromGlobalId)(id).id);
         }
       }
     };

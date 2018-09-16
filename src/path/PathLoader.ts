@@ -56,12 +56,5 @@ type Args = {
 
 export const loadPaths = async (context: DataloaderContext, args: Args) => {
   const where = args.search ? { name: { $regex: new RegExp(`^${args.search}`, 'ig') } } : {};
-  const paths = PathModel.find(where, { _id: 1 }).sort({ createdAt: -1 });
-
-  return connectionFromMongoCursor({
-    cursor: paths,
-    context,
-    args,
-    loader: load,
-  });
+  return PathModel.find(where, { _id: 1 }).sort({ createdAt: -1 });
 };

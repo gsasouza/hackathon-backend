@@ -102,7 +102,7 @@ function () {
   var _ref2 = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee2(context, args) {
-    var where, paths;
+    var where;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -112,19 +112,13 @@ function () {
                 $regex: new RegExp("^".concat(args.search), 'ig')
               }
             } : {};
-            paths = _PathModel.default.find(where, {
+            return _context2.abrupt("return", _PathModel.default.find(where, {
               _id: 1
             }).sort({
               createdAt: -1
-            });
-            return _context2.abrupt("return", (0, _graphqlMongooseLoader.connectionFromMongoCursor)({
-              cursor: paths,
-              context: context,
-              args: args,
-              loader: load
             }));
 
-          case 3:
+          case 2:
           case "end":
             return _context2.stop();
         }

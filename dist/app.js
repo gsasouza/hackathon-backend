@@ -47,9 +47,8 @@ function () {
         switch (_context.prev = _context.next) {
           case 0:
             dataloaders = (0, _registerLoaders.default)();
-            console.log(_schema.default);
             return _context.abrupt("return", {
-              graphiql: process.env.NODE_ENV !== 'production',
+              graphiql: true,
               schema: _schema.default,
               context: {
                 req: req,
@@ -67,7 +66,7 @@ function () {
               }
             });
 
-          case 3:
+          case 2:
           case "end":
             return _context.stop();
         }
